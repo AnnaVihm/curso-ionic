@@ -1,0 +1,52 @@
+{
+  "pessoa": [
+      {
+          "id": 1,
+          "nome": "Henrique Mário Mendes",
+          "cpf": "087.384.341-05",
+          "rg": "34.365.274-2",
+          "nascimento": "05/12/1997",
+          "email": "hhenriquemariomendes@machiv.com.br",
+          "fone": "(95) 3875-4019",
+          "cel": "(95) 98482-2651",
+          "urlFoto":"/assets/imgs/img1.png",
+          "endereco": [
+              {
+                  "cep": "69312-491",
+                  "endereco": "Travessa Santo Agostinho",
+                  "numero": "536",
+                  "bairro": "Centenário",
+                  "cidade": "Boa Vista",
+                  "estado": "RR",
+                  "longitude":null,
+                  "latitude":null,
+                  "logradouro":null
+              }
+          ]
+      },
+      {
+        "id": 1,
+        "nome": "Rafaela Cristiane Galvão",
+        "cpf": "541.680.381-90",
+        "rg": "32.070.814-7",
+        "nascimento": "06/08/1997",
+        "email": "rafaelacristianegalvao@comunikapublicidade.com.br",
+        "fone": "(21) 2906-1068",
+        "cel": "(21) 99916-9203",
+        "urlFoto":"/assets/imgs/img2.jpg",
+        "endereco": [
+            {
+                "cep": "24810-504",
+                "endereco": "Rua Treze",
+                "numero": "197",
+                "bairro": "Badureco",
+                "cidade": "Itaboraí",
+                "estado": "RJ",
+                "longitude":null,
+                "latitude":null,
+                "logradouro":null
+            }
+        ]
+    }
+  ]
+}

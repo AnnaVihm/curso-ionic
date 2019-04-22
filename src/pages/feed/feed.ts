@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { GlobalProvider } from '../../providers/moovie/global';
 
 /**
  * Generated class for the FeedPage page.
@@ -12,14 +13,27 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 @Component({
   selector: 'page-feed',
   templateUrl: 'feed.html',
+  providers: [GlobalProvider]
 })
 export class FeedPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  pessoas:any;
+
+  constructor(public navCtrl: NavController, 
+              public navParams: NavParams,
+              private globalProvider : GlobalProvider) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad FeedPage');
+    this.getPessoa()
+  }
+
+  getPessoa(){
+    this.globalProvider.findAllPessoa().subscribe(data => {
+     this.pessoas = JSON.parse(data._body)
+     console.log(this.pessoas)
+    })
   }
 
 }
