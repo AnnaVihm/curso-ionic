@@ -14,13 +14,15 @@ import { FeedPageModule } from '../pages/feed/feed.module';
 import { IntroPageModule } from '../pages/intro/intro.module';
 import { HttpModule, JsonpModule } from '@angular/http'
 import { GlobalProvider } from '../providers/moovie/global';
+import { PessoaFormComponent } from '../components/pessoa-form/pessoa-form';
 @NgModule({
   declarations: [
     MyApp,
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    PessoaFormComponent
     
   ],
   imports: [
@@ -37,7 +39,8 @@ import { GlobalProvider } from '../providers/moovie/global';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    PessoaFormComponent
   ],
   providers: [
     StatusBar,

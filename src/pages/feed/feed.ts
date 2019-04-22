@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 import { GlobalProvider } from '../../providers/moovie/global';
+import { PessoaFormComponent } from '../../components/pessoa-form/pessoa-form';
 
 /**
  * Generated class for the FeedPage page.
@@ -21,7 +22,8 @@ export class FeedPage {
 
   constructor(public navCtrl: NavController, 
               public navParams: NavParams,
-              private globalProvider : GlobalProvider) {
+              private globalProvider : GlobalProvider,
+              public modalCtrl : ModalController) {
   }
 
   ionViewDidLoad() {
@@ -34,6 +36,11 @@ export class FeedPage {
      this.pessoas = JSON.parse(data._body)
      console.log(this.pessoas)
     })
+  }
+
+  addPessoa(){
+    const modal = this.modalCtrl.create(PessoaFormComponent);
+    modal.present();
   }
 
 }
