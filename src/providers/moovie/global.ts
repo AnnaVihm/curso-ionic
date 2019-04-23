@@ -24,6 +24,13 @@ export class GlobalProvider {
     )
   }
 
+  createPessoa(value){
+    return this.http.post("http://localhost:3000/pessoa", value)
+    .pipe(
+      catchError(this.handleError),
+    )
+  }
+
   private handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
       console.error('An error occurred:', error.error.message);

@@ -19,7 +19,7 @@
       <button ion-item>
         <ion-item>
           <ion-avatar item-start>
-            <img src="{{pessoa?.urlFoto}}">
+            <img src="{{pessoa?.urlFoto ? pessoa?.urlFoto : '/assets/imgs/avatar.jpg' }}">
           </ion-avatar>
           <h2>{{pessoa?.nome}}</h2>
           <p>{{pessoa?.cpf}}</p>

@@ -15,6 +15,7 @@ import { IntroPageModule } from '../pages/intro/intro.module';
 import { HttpModule, JsonpModule } from '@angular/http'
 import { GlobalProvider } from '../providers/moovie/global';
 import { PessoaFormComponent } from '../components/pessoa-form/pessoa-form';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     MyApp,
@@ -31,7 +32,9 @@ import { PessoaFormComponent } from '../components/pessoa-form/pessoa-form';
     FeedPageModule,
     IntroPageModule,
     HttpModule,
-    JsonpModule
+    JsonpModule,
+    ReactiveFormsModule
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [

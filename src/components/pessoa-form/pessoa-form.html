@@ -6,7 +6,7 @@
     <ion-buttons start>
       <button ion-button (click)="dismiss()">
         <span ion-text color="primary" showWhen="ios">Cancel</span>
-        <ion-icon name="md-close" style="color:black" showWhen="android,windows"></ion-icon>
+        <ion-icon name="md-close" style="color:black"></ion-icon>
       </button>
     </ion-buttons>
   </ion-toolbar>
@@ -15,23 +15,23 @@
   <ion-list>
     <ion-item>
       <ion-label stacked>Nome</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input [formControl]="form.get('nome')" type="text"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label stacked>CPF</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input  [formControl]="form.get('cpf')" type="text"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label stacked>RG</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input  [formControl]="form.get('rg')" type="text"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label stacked>Nascimento</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input  [formControl]="form.get('nascimento')" type="text"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label stacked>E-mail</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input  [formControl]="form.get('email')" type="text"></ion-input>
     </ion-item>
   </ion-list>
   <ion-grid>
@@ -39,19 +39,19 @@
       <ion-col col-6>
         <ion-item>
           <ion-label stacked>Telefone</ion-label>
-          <ion-input type="text"></ion-input>
+          <ion-input type="text"  [formControl]="form.get('fone')"></ion-input>
         </ion-item>
       </ion-col>
       <ion-col col-6>
         <ion-item>
           <ion-label stacked>Celular</ion-label>
-          <ion-input type="text"></ion-input>
+          <ion-input type="text"  [formControl]="form.get('cel')"></ion-input>
         </ion-item>
       </ion-col>
     </ion-row>
   </ion-grid>
 
-  <button ion-button round right>Cadastrar</button>
+  <button ion-button round right [disabled]="!form.valid" (click)="create(form.value)">Cadastrar</button>
 
 
 </ion-content>
